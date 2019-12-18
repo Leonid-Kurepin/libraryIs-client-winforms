@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryIS.WinGormsClient", "LibraryIS.WinGormsClient\LibraryIS.WinGormsClient.csproj", "{5BADA2E5-F3B7-4CD8-AD67-5140E38B6228}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryIS.WinFormsClient", "LibraryIS.WinGormsClient\LibraryIS.WinFormsClient.csproj", "{5BADA2E5-F3B7-4CD8-AD67-5140E38B6228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
