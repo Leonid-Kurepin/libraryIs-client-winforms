@@ -16,5 +16,15 @@ namespace LibraryIS.WinGormsClient
         {
             InitializeComponent();
         }
+
+        private void Members_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormsNavigationHelper.GoToMainMenu(this);
+        }
+
+        private void ButtonToMainMenu_Click(object sender, EventArgs e)
+        {
+            FormsNavigationHelper.GoToMainMenu(this);
+        }
     }
 }

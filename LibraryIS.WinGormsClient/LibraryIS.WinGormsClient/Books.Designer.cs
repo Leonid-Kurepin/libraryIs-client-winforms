@@ -159,6 +159,7 @@
             this.buttonToMainMenu.TabIndex = 9;
             this.buttonToMainMenu.Text = "В главное меню";
             this.buttonToMainMenu.UseVisualStyleBackColor = true;
+            this.buttonToMainMenu.Click += new System.EventHandler(this.ButtonToMainMenu_Click);
             // 
             // buttonBookFromMember
             // 
@@ -210,6 +211,7 @@
             this.Controls.Add(this.listBoxBooks);
             this.Name = "Books";
             this.Text = "Books";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Books_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

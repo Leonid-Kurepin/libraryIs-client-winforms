@@ -28,59 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonBooks = new System.Windows.Forms.Button();
+            this.buttonUsers = new System.Windows.Forms.Button();
+            this.buttonMembers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonBooks
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(278, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 65);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Книги";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBooks.Location = new System.Drawing.Point(278, 69);
+            this.buttonBooks.Name = "buttonBooks";
+            this.buttonBooks.Size = new System.Drawing.Size(241, 65);
+            this.buttonBooks.TabIndex = 0;
+            this.buttonBooks.Text = "Книги";
+            this.buttonBooks.UseVisualStyleBackColor = true;
+            this.buttonBooks.Click += new System.EventHandler(this.ButtonBooks_Click);
             // 
-            // button2
+            // buttonUsers
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(278, 299);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(241, 65);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Пользователи системы";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUsers.Location = new System.Drawing.Point(278, 299);
+            this.buttonUsers.Name = "buttonUsers";
+            this.buttonUsers.Size = new System.Drawing.Size(241, 65);
+            this.buttonUsers.TabIndex = 0;
+            this.buttonUsers.Text = "Пользователи системы";
+            this.buttonUsers.UseVisualStyleBackColor = true;
+            this.buttonUsers.Click += new System.EventHandler(this.ButtonUsers_Click);
             // 
-            // button3
+            // buttonMembers
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(278, 183);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(241, 65);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Читатели";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMembers.Location = new System.Drawing.Point(278, 183);
+            this.buttonMembers.Name = "buttonMembers";
+            this.buttonMembers.Size = new System.Drawing.Size(241, 65);
+            this.buttonMembers.TabIndex = 0;
+            this.buttonMembers.Text = "Читатели";
+            this.buttonMembers.UseVisualStyleBackColor = true;
+            this.buttonMembers.Click += new System.EventHandler(this.ButtonMembers_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonMembers);
+            this.Controls.Add(this.buttonUsers);
+            this.Controls.Add(this.buttonBooks);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonBooks;
+        private System.Windows.Forms.Button buttonUsers;
+        private System.Windows.Forms.Button buttonMembers;
     }
 }

@@ -19,7 +19,10 @@ namespace LibraryIS.WinGormsClient
 
         private void ButtonSignIn_Click(object sender, EventArgs e)
         {
+            MainMenu mainMenuForm = new MainMenu();
+            mainMenuForm.Show();
 
+            this.Hide();
         }
     }
 }
