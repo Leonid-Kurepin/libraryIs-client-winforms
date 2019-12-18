@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\AuthorDto.cs" />
+    <Compile Include="Dto\BookDto.cs" />
     <Compile Include="Books.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +55,7 @@
       <DependentUpon>Books.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsNavigationHelper.cs" />
+    <Compile Include="Dto\MemberDto.cs" />
     <Compile Include="Members.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +68,8 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dto\PublisherDto.cs" />
+    <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
     </Compile>
