@@ -1,5 +1,5 @@
-﻿namespace LibraryIS.TestingConsoleApp.DTO
-{
+﻿namespace LibraryIS.WinFormsClient.Dto
+{ 
     public class PublisherDto
     {
         public int Id { get; set; }

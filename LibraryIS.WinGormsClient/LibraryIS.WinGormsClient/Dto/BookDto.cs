@@ -1,7 +1,6 @@
 ﻿using System;
-using LibraryIS.TestingConsoleApp.DTO;
 
-namespace LibraryIS.TestingConsoleApp.DTO
+namespace LibraryIS.WinFormsClient.Dto
 {
     public class BookDto
     {

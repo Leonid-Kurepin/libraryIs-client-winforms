@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using LibraryIS.TestingConsoleApp.DTO;
+using LibraryIS.WinFormsClient.Dto;
 
-namespace LibraryIS.TestingConsoleApp.Requests
+namespace LibraryIS.WinFormsClient.Requests
 {
     class UsersRequests
     {

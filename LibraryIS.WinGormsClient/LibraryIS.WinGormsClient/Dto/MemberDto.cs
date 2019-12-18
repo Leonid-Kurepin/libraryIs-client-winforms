@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LibraryIS.TestingConsoleApp.DTO
+namespace LibraryIS.WinFormsClient.Dto
 {
     public class MemberDto
     {
