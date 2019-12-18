@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace LibraryIS.WinGormsClient
 {
-    public partial class Form1 : Form
+    public partial class Auth : Form
     {
-        public Form1()
+        public Auth()
         {
             InitializeComponent();
+        }
+
+        private void ButtonSignIn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
