@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="FormsNavigationHelper.cs" />
     <Compile Include="Dto\MemberDto.cs" />
+    <Compile Include="LibraryIsHttpClient.cs" />
     <Compile Include="MembersForm.cs">
       <SubType>Form</SubType>
     </Compile>

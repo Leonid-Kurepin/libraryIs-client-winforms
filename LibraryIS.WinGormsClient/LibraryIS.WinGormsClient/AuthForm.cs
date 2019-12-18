@@ -1,21 +1,38 @@
 ﻿using System;
 using System.Windows.Forms;
+using LibraryIS.WinFormsClient;
 
 namespace LibraryIS.WinGormsClient
 {
     public partial class Auth : Form
     {
+
         public Auth()
         {
             InitializeComponent();
+
+            labelSignInInfo.Hide();
         }
 
-        private void ButtonSignIn_Click(object sender, EventArgs e)
+        private async void ButtonSignIn_ClickAsync(object sender, EventArgs e)
         {
-            MainMenu mainMenuForm = new MainMenu();
-            mainMenuForm.Show();
+            var urlString = "https://localhost:44330/";
+            var client = new LibraryIsHttpClient(urlString);
 
-            this.Hide();
+            var login = textBoxLogin.Text;
+            var password = textBoxPassword.Text;
+
+            if (await client.TryAuthenticateAsync(login, password))
+            {
+                MainMenu mainMenuForm = new MainMenu(client);
+                mainMenuForm.Show();
+
+                this.Hide();
+            }
+            else
+            {
+                labelSignInInfo.Show();
+            }
         }
     }
 }

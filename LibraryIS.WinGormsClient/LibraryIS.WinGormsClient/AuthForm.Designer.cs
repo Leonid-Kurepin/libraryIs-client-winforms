@@ -33,6 +33,7 @@
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonSignIn = new System.Windows.Forms.Button();
+            this.labelSignInInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -75,13 +76,24 @@
             this.buttonSignIn.TabIndex = 3;
             this.buttonSignIn.Text = "Войти";
             this.buttonSignIn.UseVisualStyleBackColor = true;
-            this.buttonSignIn.Click += new System.EventHandler(this.ButtonSignIn_Click);
+            this.buttonSignIn.Click += new System.EventHandler(this.ButtonSignIn_ClickAsync);
+            // 
+            // labelSignInInfo
+            // 
+            this.labelSignInInfo.AutoSize = true;
+            this.labelSignInInfo.ForeColor = System.Drawing.Color.Brown;
+            this.labelSignInInfo.Location = new System.Drawing.Point(333, 356);
+            this.labelSignInInfo.Name = "labelSignInInfo";
+            this.labelSignInInfo.Size = new System.Drawing.Size(161, 17);
+            this.labelSignInInfo.TabIndex = 4;
+            this.labelSignInInfo.Text = "Incorrect login/password";
             // 
             // Auth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelSignInInfo);
             this.Controls.Add(this.buttonSignIn);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
@@ -102,5 +114,6 @@
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonSignIn;
+        private System.Windows.Forms.Label labelSignInInfo;
     }
 }

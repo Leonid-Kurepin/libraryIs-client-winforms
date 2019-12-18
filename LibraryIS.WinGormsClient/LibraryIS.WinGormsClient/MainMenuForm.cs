@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Net.Http;
 using System.Windows.Forms;
+using LibraryIS.WinFormsClient;
 
 namespace LibraryIS.WinGormsClient
 {
     public partial class MainMenu : Form
     {
-        public MainMenu()
+        private readonly LibraryIsHttpClient _client; 
+        public MainMenu(LibraryIsHttpClient client)
         {
+            _client = client;
             InitializeComponent();
         }
 
@@ -17,7 +21,7 @@ namespace LibraryIS.WinGormsClient
 
         private void ButtonBooks_Click(object sender, EventArgs e)
         {
-            Books booksForm = new Books();
+            Books booksForm = new Books(_client);
             booksForm.Tag = this;
             booksForm.Show();
             this.Hide();
@@ -25,7 +29,7 @@ namespace LibraryIS.WinGormsClient
 
         private void ButtonMembers_Click(object sender, EventArgs e)
         {
-            Users membersForm = new Users();
+            Users membersForm = new Users(_client);
             membersForm.Tag = this;
             membersForm.Show(this);
             this.Hide();
@@ -33,7 +37,7 @@ namespace LibraryIS.WinGormsClient
 
         private void ButtonUsers_Click(object sender, EventArgs e)
         {
-            Members usersForm = new Members();
+            Members usersForm = new Members(_client);
             usersForm.Tag = this;
             usersForm.Show();
             this.Hide();

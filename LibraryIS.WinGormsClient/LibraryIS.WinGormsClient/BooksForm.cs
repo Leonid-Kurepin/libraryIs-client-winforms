@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using LibraryIS.WinFormsClient;
 
 namespace LibraryIS.WinGormsClient
 {
     public partial class Books : Form
     {
-        public Books()
+        private readonly LibraryIsHttpClient _client;
+
+        public Books(LibraryIsHttpClient client)
         {
+            _client = client;
             InitializeComponent();
         }
 
