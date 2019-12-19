@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Net.Http;
 using System.Windows.Forms;
-using LibraryIS.WinFormsClient;
 
-namespace LibraryIS.WinGormsClient
+namespace LibraryIS.WinFormsClient
 {
     public partial class MainMenu : Form
     {

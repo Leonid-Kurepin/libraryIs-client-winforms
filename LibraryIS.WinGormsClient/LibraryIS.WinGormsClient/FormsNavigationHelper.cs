@@ -1,7 +1,6 @@
-﻿using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
-namespace LibraryIS.WinGormsClient
+namespace LibraryIS.WinFormsClient
 {
     public class FormsNavigationHelper
     {

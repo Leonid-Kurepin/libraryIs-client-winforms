@@ -1,4 +1,4 @@
-﻿namespace LibraryIS.WinGormsClient
+﻿namespace LibraryIS.WinFormsClient
 {
     partial class Auth
     {

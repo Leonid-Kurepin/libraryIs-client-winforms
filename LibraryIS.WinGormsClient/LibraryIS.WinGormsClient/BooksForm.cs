@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using LibraryIS.WinFormsClient;
 
-namespace LibraryIS.WinGormsClient
+namespace LibraryIS.WinFormsClient
 {
     public partial class Books : Form
     {
