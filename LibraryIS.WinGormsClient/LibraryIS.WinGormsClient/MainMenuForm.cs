@@ -27,7 +27,7 @@ namespace LibraryIS.WinFormsClient
 
         private void ButtonMembers_Click(object sender, EventArgs e)
         {
-            Users membersForm = new Users(_client);
+            Members membersForm = new Members(_client);
             membersForm.Tag = this;
             membersForm.Show(this);
             this.Hide();
@@ -35,7 +35,7 @@ namespace LibraryIS.WinFormsClient
 
         private void ButtonUsers_Click(object sender, EventArgs e)
         {
-            Members usersForm = new Members(_client);
+            Users usersForm = new Users(_client);
             usersForm.Tag = this;
             usersForm.Show();
             this.Hide();
