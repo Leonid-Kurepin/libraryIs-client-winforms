@@ -209,7 +209,9 @@
             this.Controls.Add(this.buttonNextPage);
             this.Controls.Add(this.labelBooks);
             this.Controls.Add(this.listBoxBooks);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Books";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Books";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Books_FormClosing);
             this.ResumeLayout(false);

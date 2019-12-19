@@ -132,7 +132,7 @@
             this.listBoxMembers.Size = new System.Drawing.Size(496, 500);
             this.listBoxMembers.TabIndex = 28;
             // 
-            // Users
+            // Members
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,7 +147,9 @@
             this.Controls.Add(this.buttonDeleteMember);
             this.Controls.Add(this.labelMembers);
             this.Controls.Add(this.listBoxMembers);
-            this.Name = "Users";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "Members";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Members";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Users_FormClosing);
             this.ResumeLayout(false);

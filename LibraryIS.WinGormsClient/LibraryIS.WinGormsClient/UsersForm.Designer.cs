@@ -102,7 +102,7 @@
             this.buttonPreviousPage.Text = "Назад";
             this.buttonPreviousPage.UseVisualStyleBackColor = true;
             // 
-            // Members
+            // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,7 +114,9 @@
             this.Controls.Add(this.buttonDeleteMember);
             this.Controls.Add(this.labelMembers);
             this.Controls.Add(this.listBoxMembers);
-            this.Name = "Members";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "Users";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Members_FormClosing);
             this.ResumeLayout(false);

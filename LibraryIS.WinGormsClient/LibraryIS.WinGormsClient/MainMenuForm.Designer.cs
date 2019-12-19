@@ -74,7 +74,9 @@
             this.Controls.Add(this.buttonMembers);
             this.Controls.Add(this.buttonUsers);
             this.Controls.Add(this.buttonBooks);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.ResumeLayout(false);
