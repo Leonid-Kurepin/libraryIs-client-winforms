@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryIS.WinFormsClient.Dto;
 using LibraryIS.WinFormsClient.HttpClient;
@@ -33,7 +34,12 @@ namespace LibraryIS.WinFormsClient
 
         private async void Users_Load(object sender, EventArgs e)
         {
-            var responseContent =  await _client.GetUsers();
+            await UpdateUsersDataGridAsync();
+        }
+
+        private async Task UpdateUsersDataGridAsync()
+        {
+            var responseContent = await _client.GetUsersAsync();
             var usersList = responseContent.Items as List<UserDto>;
 
             List<UserView> users = new List<UserView>();
@@ -46,7 +52,5 @@ namespace LibraryIS.WinFormsClient
 
             dataGridViewUsers.DataSource = DatatableConverter.ConvertListToDatatable(users);
         }
-
-       
     }
 }

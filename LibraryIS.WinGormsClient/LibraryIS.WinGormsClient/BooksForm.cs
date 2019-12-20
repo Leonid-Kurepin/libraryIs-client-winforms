@@ -33,10 +33,10 @@ namespace LibraryIS.WinFormsClient
 
         private async void Books_Load(object sender, EventArgs e)
         {
-            await UpdateDataGridAsync();
+            await UpdateBooksDataGridAsync();
         }
 
-        private async Task UpdateDataGridAsync()
+        private async Task UpdateBooksDataGridAsync()
         {
             var responseContent = await _client.GetBooksAsync();
             var booksList = responseContent.Items as List<BookDto>;
