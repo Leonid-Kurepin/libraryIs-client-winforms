@@ -6,7 +6,7 @@ namespace LibraryIS.WinFormsClient.HttpClient.Extensions
 {
     public static class UsersRequestsExtension
     {
-        public static async Task<PagedCollectionResponse<UserDto>> GetUsers(this LibraryIsHttpClient client)
+        public static async Task<PagedCollectionResponse<UserDto>> GetUsersAsync(this LibraryIsHttpClient client)
         {
             //HTTP GET
             var response = await client.GetAsync("api/users");

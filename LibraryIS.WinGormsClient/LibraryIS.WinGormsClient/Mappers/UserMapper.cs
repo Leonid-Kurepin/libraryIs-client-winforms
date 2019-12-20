@@ -1,5 +1,5 @@
 ﻿using LibraryIS.WinFormsClient.Dto;
-using LibraryIS.WinFormsClient.View;
+using LibraryIS.WinFormsClient.Views;
 
 namespace LibraryIS.WinFormsClient.Mappers
 {

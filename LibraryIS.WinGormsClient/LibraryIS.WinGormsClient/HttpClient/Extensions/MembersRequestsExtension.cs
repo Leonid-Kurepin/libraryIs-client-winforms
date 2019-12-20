@@ -1,9 +1,8 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 using LibraryIS.WinFormsClient.Dto;
-using LibraryIS.WinFormsClient.HttpClient;
 
-namespace LibraryIS.WinFormsClient.Requests
+namespace LibraryIS.WinFormsClient.HttpClient.Extensions
 {
     public static class MembersRequests
     {

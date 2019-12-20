@@ -1,4 +1,4 @@
-﻿namespace LibraryIS.WinFormsClient.View
+﻿namespace LibraryIS.WinFormsClient.Views
 {
     public class UserView
     {

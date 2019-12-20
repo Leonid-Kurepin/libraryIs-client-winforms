@@ -1,4 +1,4 @@
-﻿namespace LibraryIS.WinFormsClient
+﻿namespace LibraryIS.WinFormsClient.Forms
 {
     partial class Members
     {

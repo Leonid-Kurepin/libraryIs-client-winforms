@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using LibraryIS.WinFormsClient.HttpClient;
+using LibraryIS.WinFormsClient.HttpClient.Extensions;
 
-namespace LibraryIS.WinFormsClient
+namespace LibraryIS.WinFormsClient.Forms
 {
     public partial class Auth : Form
     {
-
         public Auth()
         {
             InitializeComponent();

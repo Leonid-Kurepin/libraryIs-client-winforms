@@ -4,12 +4,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryIS.WinFormsClient.Dto;
 using LibraryIS.WinFormsClient.HttpClient;
+using LibraryIS.WinFormsClient.HttpClient.Extensions;
 using LibraryIS.WinFormsClient.Mappers;
-using LibraryIS.WinFormsClient.Requests;
-using LibraryIS.WinFormsClient.View;
 using LibraryIS.WinFormsClient.Views;
 
-namespace LibraryIS.WinFormsClient
+namespace LibraryIS.WinFormsClient.Forms
 {
     public partial class Books : Form
     {
