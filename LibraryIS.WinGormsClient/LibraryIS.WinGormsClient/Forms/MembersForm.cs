@@ -77,5 +77,12 @@ namespace LibraryIS.WinFormsClient.Forms
             _selectedMemberIndex = dataGridViewMembers.SelectedRows[0].Index;
             _selectedMemberId = (int)dataGridViewMembers.SelectedRows[0].Cells["Id"].Value;
         }
+
+        private void ButtonAddMember_Click(object sender, EventArgs e)
+        {
+            AddMemberForm addMemberForm = new AddMemberForm(_client);
+            addMemberForm.Tag = this;
+            addMemberForm.ShowDialog();
+        }
     }
 }

@@ -94,6 +94,7 @@
             this.buttonAddMember.TabIndex = 33;
             this.buttonAddMember.Text = "Добавить";
             this.buttonAddMember.UseVisualStyleBackColor = true;
+            this.buttonAddMember.Click += new System.EventHandler(this.ButtonAddMember_Click);
             // 
             // buttonToMainMenu
             // 

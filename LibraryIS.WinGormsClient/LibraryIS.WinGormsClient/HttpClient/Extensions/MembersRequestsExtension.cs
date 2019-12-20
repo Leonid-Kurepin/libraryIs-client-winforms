@@ -14,6 +14,22 @@ namespace LibraryIS.WinFormsClient.HttpClient.Extensions
             return await response.Content.ReadAsAsync<PagedCollectionResponse<MemberDto>>();
         }
 
+        public static async Task<bool> AddMemberAsync(this LibraryIsHttpClient client, MemberDto memberDto)
+        {
+
+            var postTask = client.PostAsJsonAsync<MemberDto>("api/members", memberDto);
+            postTask.Wait();
+
+            var result = postTask.Result;
+
+            if (result.IsSuccessStatusCode)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public static async Task<bool> DeleteMemberAsync(this LibraryIsHttpClient client, int memberId)
         {
             var deleteTask = client.DeleteAsync("api/members/" + memberId);
