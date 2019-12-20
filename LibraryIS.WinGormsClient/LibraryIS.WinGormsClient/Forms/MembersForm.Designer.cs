@@ -113,6 +113,7 @@
             this.buttonDeleteMember.TabIndex = 35;
             this.buttonDeleteMember.Text = "Удалить";
             this.buttonDeleteMember.UseVisualStyleBackColor = true;
+            this.buttonDeleteMember.Click += new System.EventHandler(this.ButtonDeleteMember_Click);
             // 
             // labelMembers
             // 
@@ -137,6 +138,7 @@
             this.dataGridViewMembers.RowTemplate.Height = 24;
             this.dataGridViewMembers.Size = new System.Drawing.Size(885, 502);
             this.dataGridViewMembers.TabIndex = 38;
+            this.dataGridViewMembers.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.DataGridViewMembers_RowStateChanged);
             // 
             // Members
             // 

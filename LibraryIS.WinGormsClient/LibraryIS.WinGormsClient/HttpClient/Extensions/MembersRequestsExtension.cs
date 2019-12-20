@@ -14,9 +14,9 @@ namespace LibraryIS.WinFormsClient.HttpClient.Extensions
             return await response.Content.ReadAsAsync<PagedCollectionResponse<MemberDto>>();
         }
 
-        public static async Task<bool> DeleteUserAsync(this LibraryIsHttpClient client, int userId)
+        public static async Task<bool> DeleteMemberAsync(this LibraryIsHttpClient client, int memberId)
         {
-            var deleteTask = client.DeleteAsync("api/users/" + userId);
+            var deleteTask = client.DeleteAsync("api/members/" + memberId);
             deleteTask.Wait();
 
             var result = deleteTask.Result;
