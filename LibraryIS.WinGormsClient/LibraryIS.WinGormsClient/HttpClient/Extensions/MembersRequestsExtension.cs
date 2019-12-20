@@ -13,5 +13,21 @@ namespace LibraryIS.WinFormsClient.HttpClient.Extensions
 
             return await response.Content.ReadAsAsync<PagedCollectionResponse<MemberDto>>();
         }
+
+        public static async Task<bool> DeleteUserAsync(this LibraryIsHttpClient client, int userId)
+        {
+            var deleteTask = client.DeleteAsync("api/users/" + userId);
+            deleteTask.Wait();
+
+            var result = deleteTask.Result;
+
+            if (result.IsSuccessStatusCode)
+            {
+                return true;
+
+            }
+
+            return false;
+        }
     }
 }

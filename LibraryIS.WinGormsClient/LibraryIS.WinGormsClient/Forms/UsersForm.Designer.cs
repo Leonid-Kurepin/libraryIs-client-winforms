@@ -65,6 +65,7 @@
             this.buttonDeleteUser.TabIndex = 25;
             this.buttonDeleteUser.Text = "Удалить";
             this.buttonDeleteUser.UseVisualStyleBackColor = true;
+            this.buttonDeleteUser.Click += new System.EventHandler(this.ButtonDeleteUser_Click);
             // 
             // labelUsers
             // 
@@ -98,6 +99,7 @@
             // 
             this.dataGridViewUsers.AllowUserToAddRows = false;
             this.dataGridViewUsers.AllowUserToDeleteRows = false;
+            this.dataGridViewUsers.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsers.Location = new System.Drawing.Point(370, 77);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
@@ -106,6 +108,7 @@
             this.dataGridViewUsers.RowTemplate.Height = 24;
             this.dataGridViewUsers.Size = new System.Drawing.Size(566, 295);
             this.dataGridViewUsers.TabIndex = 28;
+            this.dataGridViewUsers.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.DataGridViewUsers_RowStateChanged);
             // 
             // Users
             // 

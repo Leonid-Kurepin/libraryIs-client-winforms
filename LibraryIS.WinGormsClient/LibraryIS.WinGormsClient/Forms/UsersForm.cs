@@ -14,6 +14,9 @@ namespace LibraryIS.WinFormsClient.Forms
     {
         private readonly LibraryIsHttpClient _client;
 
+        private int? _selectedUserIndex;
+        private int? _selectedUserId;
+
         public Users(LibraryIsHttpClient client)
         {
             _client = client;
@@ -49,6 +52,31 @@ namespace LibraryIS.WinFormsClient.Forms
             }
 
             dataGridViewUsers.DataSource = DatatableConverter.ConvertListToDatatable(users);
+        }
+
+        private void DataGridViewUsers_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            // For any other operation except, StateChanged, do nothing
+            if (e.StateChanged != DataGridViewElementStates.Selected) return;
+
+            _selectedUserIndex = dataGridViewUsers.SelectedRows[0].Index;
+            _selectedUserId = (int) dataGridViewUsers.SelectedRows[0].Cells["Id"].Value;
+        }
+
+        private async void ButtonDeleteUser_Click(object sender, EventArgs e)
+        {
+            if (_selectedUserId == null)
+            {
+                return;
+            }
+
+            await _client.DeleteUserAsync((int) _selectedUserId);
+
+            dataGridViewUsers.Rows.RemoveAt((int) _selectedUserIndex);
+
+            _selectedUserIndex = null;
+            _selectedUserId = null;
+
         }
     }
 }
