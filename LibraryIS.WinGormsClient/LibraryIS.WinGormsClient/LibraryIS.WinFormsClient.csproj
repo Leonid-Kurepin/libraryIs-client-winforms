@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatatableConverter.cs" />
     <Compile Include="Dto\AuthorDto.cs" />
     <Compile Include="Dto\BookDto.cs" />
     <Compile Include="BooksForm.cs">
@@ -62,7 +63,9 @@
     </Compile>
     <Compile Include="FormsNavigationHelper.cs" />
     <Compile Include="Dto\MemberDto.cs" />
-    <Compile Include="LibraryIsHttpClient.cs" />
+    <Compile Include="HttpClient\Extensions\AuthExtension.cs" />
+    <Compile Include="HttpClient\LibraryIsHttpClient.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="MembersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,9 +80,10 @@
     </Compile>
     <Compile Include="Dto\PublisherDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
+    <Compile Include="PagedCollectionResponse.cs" />
     <Compile Include="Requests\BooksRequests.cs" />
     <Compile Include="Requests\MembersRequests.cs" />
-    <Compile Include="Requests\UsersRequests.cs" />
+    <Compile Include="HttpClient\Extensions\UsersRequestsExtension.cs" />
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +98,7 @@
     <Compile Include="AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserView.cs" />
     <EmbeddedResource Include="BooksForm.resx">
       <DependentUpon>BooksForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,5 +138,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

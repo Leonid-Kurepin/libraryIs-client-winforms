@@ -1,5 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Windows.Forms;
+using LibraryIS.WinFormsClient.Dto;
+using LibraryIS.WinFormsClient.HttpClient;
+using LibraryIS.WinFormsClient.HttpClient.Extensions;
+using LibraryIS.WinFormsClient.Mappers;
+using LibraryIS.WinFormsClient.View;
 
 namespace LibraryIS.WinFormsClient
 {
@@ -22,5 +30,23 @@ namespace LibraryIS.WinFormsClient
         {
             FormsNavigationHelper.GoToMainMenu(this);
         }
+
+        private async void Users_Load(object sender, EventArgs e)
+        {
+            var responseContent =  await _client.GetUsers();
+            var usersList = responseContent.Items as List<UserDto>;
+
+            List<UserView> users = new List<UserView>();
+
+            foreach (var userDto in usersList)
+            {
+                var userView = UserMapper.MapToUserView(userDto);
+                users.Add(userView);
+            }
+
+            dataGridViewUsers.DataSource = DatatableConverter.ConvertListToDatatable(users);
+        }
+
+       
     }
 }

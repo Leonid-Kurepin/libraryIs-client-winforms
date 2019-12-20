@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonAddMember = new System.Windows.Forms.Button();
+            this.buttonAddUser = new System.Windows.Forms.Button();
             this.buttonToMainMenu = new System.Windows.Forms.Button();
-            this.buttonDeleteMember = new System.Windows.Forms.Button();
-            this.labelMembers = new System.Windows.Forms.Label();
-            this.listBoxMembers = new System.Windows.Forms.ListBox();
+            this.buttonDeleteUser = new System.Windows.Forms.Button();
+            this.labelUsers = new System.Windows.Forms.Label();
             this.buttonNextPage = new System.Windows.Forms.Button();
             this.buttonPreviousPage = new System.Windows.Forms.Button();
+            this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonAddMember
+            // buttonAddUser
             // 
-            this.buttonAddMember.Location = new System.Drawing.Point(85, 154);
-            this.buttonAddMember.Name = "buttonAddMember";
-            this.buttonAddMember.Size = new System.Drawing.Size(249, 37);
-            this.buttonAddMember.TabIndex = 23;
-            this.buttonAddMember.Text = "Добавить";
-            this.buttonAddMember.UseVisualStyleBackColor = true;
+            this.buttonAddUser.Location = new System.Drawing.Point(55, 120);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(249, 37);
+            this.buttonAddUser.TabIndex = 23;
+            this.buttonAddUser.Text = "Добавить";
+            this.buttonAddUser.UseVisualStyleBackColor = true;
             // 
             // buttonToMainMenu
             // 
-            this.buttonToMainMenu.Location = new System.Drawing.Point(85, 362);
+            this.buttonToMainMenu.Location = new System.Drawing.Point(55, 362);
             this.buttonToMainMenu.Name = "buttonToMainMenu";
             this.buttonToMainMenu.Size = new System.Drawing.Size(249, 63);
             this.buttonToMainMenu.TabIndex = 24;
@@ -56,37 +57,28 @@
             this.buttonToMainMenu.UseVisualStyleBackColor = true;
             this.buttonToMainMenu.Click += new System.EventHandler(this.ButtonToMainMenu_Click);
             // 
-            // buttonDeleteMember
+            // buttonDeleteUser
             // 
-            this.buttonDeleteMember.Location = new System.Drawing.Point(85, 250);
-            this.buttonDeleteMember.Name = "buttonDeleteMember";
-            this.buttonDeleteMember.Size = new System.Drawing.Size(249, 37);
-            this.buttonDeleteMember.TabIndex = 25;
-            this.buttonDeleteMember.Text = "Удалить";
-            this.buttonDeleteMember.UseVisualStyleBackColor = true;
+            this.buttonDeleteUser.Location = new System.Drawing.Point(55, 218);
+            this.buttonDeleteUser.Name = "buttonDeleteUser";
+            this.buttonDeleteUser.Size = new System.Drawing.Size(249, 37);
+            this.buttonDeleteUser.TabIndex = 25;
+            this.buttonDeleteUser.Text = "Удалить";
+            this.buttonDeleteUser.UseVisualStyleBackColor = true;
             // 
-            // labelMembers
+            // labelUsers
             // 
-            this.labelMembers.AutoSize = true;
-            this.labelMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMembers.Location = new System.Drawing.Point(410, 49);
-            this.labelMembers.Name = "labelMembers";
-            this.labelMembers.Size = new System.Drawing.Size(159, 25);
-            this.labelMembers.TabIndex = 17;
-            this.labelMembers.Text = "Пользователи";
-            // 
-            // listBoxMembers
-            // 
-            this.listBoxMembers.FormattingEnabled = true;
-            this.listBoxMembers.ItemHeight = 16;
-            this.listBoxMembers.Location = new System.Drawing.Point(413, 94);
-            this.listBoxMembers.Name = "listBoxMembers";
-            this.listBoxMembers.Size = new System.Drawing.Size(496, 276);
-            this.listBoxMembers.TabIndex = 16;
+            this.labelUsers.AutoSize = true;
+            this.labelUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsers.Location = new System.Drawing.Point(374, 49);
+            this.labelUsers.Name = "labelUsers";
+            this.labelUsers.Size = new System.Drawing.Size(159, 25);
+            this.labelUsers.TabIndex = 17;
+            this.labelUsers.Text = "Пользователи";
             // 
             // buttonNextPage
             // 
-            this.buttonNextPage.Location = new System.Drawing.Point(776, 394);
+            this.buttonNextPage.Location = new System.Drawing.Point(807, 394);
             this.buttonNextPage.Name = "buttonNextPage";
             this.buttonNextPage.Size = new System.Drawing.Size(120, 31);
             this.buttonNextPage.TabIndex = 26;
@@ -95,42 +87,57 @@
             // 
             // buttonPreviousPage
             // 
-            this.buttonPreviousPage.Location = new System.Drawing.Point(427, 394);
+            this.buttonPreviousPage.Location = new System.Drawing.Point(379, 394);
             this.buttonPreviousPage.Name = "buttonPreviousPage";
             this.buttonPreviousPage.Size = new System.Drawing.Size(120, 31);
             this.buttonPreviousPage.TabIndex = 27;
             this.buttonPreviousPage.Text = "Назад";
             this.buttonPreviousPage.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewUsers
+            // 
+            this.dataGridViewUsers.AllowUserToAddRows = false;
+            this.dataGridViewUsers.AllowUserToDeleteRows = false;
+            this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsers.Location = new System.Drawing.Point(370, 77);
+            this.dataGridViewUsers.Name = "dataGridViewUsers";
+            this.dataGridViewUsers.ReadOnly = true;
+            this.dataGridViewUsers.RowHeadersWidth = 51;
+            this.dataGridViewUsers.RowTemplate.Height = 24;
+            this.dataGridViewUsers.Size = new System.Drawing.Size(566, 295);
+            this.dataGridViewUsers.TabIndex = 28;
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 508);
+            this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.buttonPreviousPage);
             this.Controls.Add(this.buttonNextPage);
-            this.Controls.Add(this.buttonAddMember);
+            this.Controls.Add(this.buttonAddUser);
             this.Controls.Add(this.buttonToMainMenu);
-            this.Controls.Add(this.buttonDeleteMember);
-            this.Controls.Add(this.labelMembers);
-            this.Controls.Add(this.listBoxMembers);
+            this.Controls.Add(this.buttonDeleteUser);
+            this.Controls.Add(this.labelUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Members_FormClosing);
+            this.Load += new System.EventHandler(this.Users_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonAddMember;
+        private System.Windows.Forms.Button buttonAddUser;
         private System.Windows.Forms.Button buttonToMainMenu;
-        private System.Windows.Forms.Button buttonDeleteMember;
-        private System.Windows.Forms.Label labelMembers;
-        private System.Windows.Forms.ListBox listBoxMembers;
+        private System.Windows.Forms.Button buttonDeleteUser;
+        private System.Windows.Forms.Label labelUsers;
         private System.Windows.Forms.Button buttonNextPage;
         private System.Windows.Forms.Button buttonPreviousPage;
+        private System.Windows.Forms.DataGridView dataGridViewUsers;
     }
 }
