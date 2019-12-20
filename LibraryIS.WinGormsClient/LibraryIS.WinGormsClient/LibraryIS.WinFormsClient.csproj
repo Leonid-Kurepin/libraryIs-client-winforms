@@ -66,6 +66,7 @@
     <Compile Include="HttpClient\Extensions\AuthExtension.cs" />
     <Compile Include="HttpClient\LibraryIsHttpClient.cs" />
     <Compile Include="Mappers\BookMapper.cs" />
+    <Compile Include="Mappers\MemberMapper.cs" />
     <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="MembersForm.cs">
       <SubType>Form</SubType>
@@ -83,7 +84,7 @@
     <Compile Include="Dto\UserDto.cs" />
     <Compile Include="PagedCollectionResponse.cs" />
     <Compile Include="HttpClient\Extensions\BooksRequestsExtension.cs" />
-    <Compile Include="Requests\MembersRequests.cs" />
+    <Compile Include="HttpClient\Extensions\MembersRequestsExtension.cs" />
     <Compile Include="HttpClient\Extensions\UsersRequestsExtension.cs" />
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
@@ -100,6 +101,7 @@
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\BookView.cs" />
+    <Compile Include="Views\MemberView.cs" />
     <Compile Include="Views\UserView.cs" />
     <EmbeddedResource Include="BooksForm.resx">
       <DependentUpon>BooksForm.cs</DependentUpon>
@@ -140,6 +142,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Requests\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

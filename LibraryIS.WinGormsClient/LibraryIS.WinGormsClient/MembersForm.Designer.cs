@@ -37,12 +37,13 @@
             this.buttonToMainMenu = new System.Windows.Forms.Button();
             this.buttonDeleteMember = new System.Windows.Forms.Button();
             this.labelMembers = new System.Windows.Forms.Label();
-            this.listBoxMembers = new System.Windows.Forms.ListBox();
+            this.dataGridViewMembers = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonPreviousPage
             // 
-            this.buttonPreviousPage.Location = new System.Drawing.Point(494, 617);
+            this.buttonPreviousPage.Location = new System.Drawing.Point(466, 609);
             this.buttonPreviousPage.Name = "buttonPreviousPage";
             this.buttonPreviousPage.Size = new System.Drawing.Size(120, 31);
             this.buttonPreviousPage.TabIndex = 37;
@@ -51,7 +52,7 @@
             // 
             // buttonNextPage
             // 
-            this.buttonNextPage.Location = new System.Drawing.Point(839, 617);
+            this.buttonNextPage.Location = new System.Drawing.Point(1177, 609);
             this.buttonNextPage.Name = "buttonNextPage";
             this.buttonNextPage.Size = new System.Drawing.Size(120, 31);
             this.buttonNextPage.TabIndex = 36;
@@ -96,7 +97,7 @@
             // 
             // buttonToMainMenu
             // 
-            this.buttonToMainMenu.Location = new System.Drawing.Point(59, 600);
+            this.buttonToMainMenu.Location = new System.Drawing.Point(59, 592);
             this.buttonToMainMenu.Name = "buttonToMainMenu";
             this.buttonToMainMenu.Size = new System.Drawing.Size(339, 48);
             this.buttonToMainMenu.TabIndex = 34;
@@ -117,26 +118,32 @@
             // 
             this.labelMembers.AutoSize = true;
             this.labelMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMembers.Location = new System.Drawing.Point(474, 51);
+            this.labelMembers.Location = new System.Drawing.Point(461, 53);
             this.labelMembers.Name = "labelMembers";
             this.labelMembers.Size = new System.Drawing.Size(112, 25);
             this.labelMembers.TabIndex = 29;
             this.labelMembers.Text = "Читатели";
             // 
-            // listBoxMembers
+            // dataGridViewMembers
             // 
-            this.listBoxMembers.FormattingEnabled = true;
-            this.listBoxMembers.ItemHeight = 16;
-            this.listBoxMembers.Location = new System.Drawing.Point(477, 96);
-            this.listBoxMembers.Name = "listBoxMembers";
-            this.listBoxMembers.Size = new System.Drawing.Size(496, 500);
-            this.listBoxMembers.TabIndex = 28;
+            this.dataGridViewMembers.AllowUserToAddRows = false;
+            this.dataGridViewMembers.AllowUserToDeleteRows = false;
+            this.dataGridViewMembers.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMembers.Location = new System.Drawing.Point(435, 81);
+            this.dataGridViewMembers.Name = "dataGridViewMembers";
+            this.dataGridViewMembers.ReadOnly = true;
+            this.dataGridViewMembers.RowHeadersWidth = 51;
+            this.dataGridViewMembers.RowTemplate.Height = 24;
+            this.dataGridViewMembers.Size = new System.Drawing.Size(885, 502);
+            this.dataGridViewMembers.TabIndex = 38;
             // 
             // Members
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 698);
+            this.ClientSize = new System.Drawing.Size(1365, 698);
+            this.Controls.Add(this.dataGridViewMembers);
             this.Controls.Add(this.buttonPreviousPage);
             this.Controls.Add(this.buttonNextPage);
             this.Controls.Add(this.buttonBookToMember);
@@ -146,12 +153,13 @@
             this.Controls.Add(this.buttonToMainMenu);
             this.Controls.Add(this.buttonDeleteMember);
             this.Controls.Add(this.labelMembers);
-            this.Controls.Add(this.listBoxMembers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Members";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Members";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Users_FormClosing);
+            this.Load += new System.EventHandler(this.Members_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,7 +176,7 @@
         private System.Windows.Forms.Button buttonToMainMenu;
         private System.Windows.Forms.Button buttonDeleteMember;
         private System.Windows.Forms.Label labelMembers;
-        private System.Windows.Forms.ListBox listBoxMembers;
+        private System.Windows.Forms.DataGridView dataGridViewMembers;
     }
 }
 
