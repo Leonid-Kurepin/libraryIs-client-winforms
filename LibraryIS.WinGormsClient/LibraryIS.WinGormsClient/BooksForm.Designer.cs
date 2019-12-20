@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxBooks = new System.Windows.Forms.ListBox();
             this.labelBooks = new System.Windows.Forms.Label();
             this.buttonNextPage = new System.Windows.Forms.Button();
             this.buttonPreviousPage = new System.Windows.Forms.Button();
@@ -44,22 +43,15 @@
             this.buttonBookFromMember = new System.Windows.Forms.Button();
             this.buttonBookToMember = new System.Windows.Forms.Button();
             this.buttonEditBook = new System.Windows.Forms.Button();
+            this.dataGridViewBooks = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listBoxBooks
-            // 
-            this.listBoxBooks.FormattingEnabled = true;
-            this.listBoxBooks.ItemHeight = 16;
-            this.listBoxBooks.Location = new System.Drawing.Point(485, 87);
-            this.listBoxBooks.Name = "listBoxBooks";
-            this.listBoxBooks.Size = new System.Drawing.Size(496, 500);
-            this.listBoxBooks.TabIndex = 0;
             // 
             // labelBooks
             // 
             this.labelBooks.AutoSize = true;
             this.labelBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBooks.Location = new System.Drawing.Point(482, 42);
+            this.labelBooks.Location = new System.Drawing.Point(445, 59);
             this.labelBooks.Name = "labelBooks";
             this.labelBooks.Size = new System.Drawing.Size(70, 25);
             this.labelBooks.TabIndex = 1;
@@ -67,7 +59,7 @@
             // 
             // buttonNextPage
             // 
-            this.buttonNextPage.Location = new System.Drawing.Point(847, 608);
+            this.buttonNextPage.Location = new System.Drawing.Point(1187, 608);
             this.buttonNextPage.Name = "buttonNextPage";
             this.buttonNextPage.Size = new System.Drawing.Size(120, 31);
             this.buttonNextPage.TabIndex = 2;
@@ -76,7 +68,7 @@
             // 
             // buttonPreviousPage
             // 
-            this.buttonPreviousPage.Location = new System.Drawing.Point(502, 608);
+            this.buttonPreviousPage.Location = new System.Drawing.Point(459, 608);
             this.buttonPreviousPage.Name = "buttonPreviousPage";
             this.buttonPreviousPage.Size = new System.Drawing.Size(120, 31);
             this.buttonPreviousPage.TabIndex = 3;
@@ -126,7 +118,7 @@
             // 
             // buttonAddBook
             // 
-            this.buttonAddBook.Location = new System.Drawing.Point(641, 608);
+            this.buttonAddBook.Location = new System.Drawing.Point(807, 608);
             this.buttonAddBook.Name = "buttonAddBook";
             this.buttonAddBook.Size = new System.Drawing.Size(187, 31);
             this.buttonAddBook.TabIndex = 8;
@@ -188,11 +180,26 @@
             this.buttonEditBook.Text = "Редактировать книгу";
             this.buttonEditBook.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewBooks
+            // 
+            this.dataGridViewBooks.AllowUserToAddRows = false;
+            this.dataGridViewBooks.AllowUserToDeleteRows = false;
+            this.dataGridViewBooks.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBooks.Location = new System.Drawing.Point(435, 87);
+            this.dataGridViewBooks.Name = "dataGridViewBooks";
+            this.dataGridViewBooks.ReadOnly = true;
+            this.dataGridViewBooks.RowHeadersWidth = 51;
+            this.dataGridViewBooks.RowTemplate.Height = 24;
+            this.dataGridViewBooks.Size = new System.Drawing.Size(885, 502);
+            this.dataGridViewBooks.TabIndex = 29;
+            // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 698);
+            this.ClientSize = new System.Drawing.Size(1340, 698);
+            this.Controls.Add(this.dataGridViewBooks);
             this.Controls.Add(this.labelFilterAuthor);
             this.Controls.Add(this.labelFilterTitle);
             this.Controls.Add(this.labelFilter);
@@ -208,20 +215,19 @@
             this.Controls.Add(this.buttonPreviousPage);
             this.Controls.Add(this.buttonNextPage);
             this.Controls.Add(this.labelBooks);
-            this.Controls.Add(this.listBoxBooks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Books";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Books";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Books_FormClosing);
+            this.Load += new System.EventHandler(this.Books_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBoxBooks;
         private System.Windows.Forms.Label labelBooks;
         private System.Windows.Forms.Button buttonNextPage;
         private System.Windows.Forms.Button buttonPreviousPage;
@@ -237,5 +243,6 @@
         private System.Windows.Forms.Button buttonBookFromMember;
         private System.Windows.Forms.Button buttonBookToMember;
         private System.Windows.Forms.Button buttonEditBook;
+        private System.Windows.Forms.DataGridView dataGridViewBooks;
     }
 }
