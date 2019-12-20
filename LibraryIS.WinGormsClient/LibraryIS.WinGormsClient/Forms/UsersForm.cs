@@ -78,5 +78,12 @@ namespace LibraryIS.WinFormsClient.Forms
             _selectedUserId = null;
 
         }
+
+        private void ButtonAddUser_Click(object sender, EventArgs e)
+        {
+            AddUserForm addUserForm = new AddUserForm(_client);
+            addUserForm.Tag = this;
+            addUserForm.ShowDialog();
+        }
     }
 }

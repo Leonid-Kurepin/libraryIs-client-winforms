@@ -46,6 +46,7 @@
             this.buttonAddUser.TabIndex = 23;
             this.buttonAddUser.Text = "Добавить";
             this.buttonAddUser.UseVisualStyleBackColor = true;
+            this.buttonAddUser.Click += new System.EventHandler(this.ButtonAddUser_Click);
             // 
             // buttonToMainMenu
             // 
