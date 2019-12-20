@@ -1,18 +1,12 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using LibraryIS.WinFormsClient.Dto;
 
-namespace LibraryIS.WinFormsClient
+namespace LibraryIS.WinFormsClient.HttpClient.Extensions
 {
-    public class LibraryIsHttpClient : HttpClient
+    public static class AuthExtension
     {
-        public LibraryIsHttpClient(string urlString)
-        {
-            this.BaseAddress = new Uri(urlString);
-
-        }
-        public async Task<bool> TryAuthenticateAsync(string email, string password)
+        public static async Task<bool> TryAuthenticateAsync(this LibraryIsHttpClient client, string email, string password)
         {
             var user = new UserDto
             {
@@ -20,7 +14,7 @@ namespace LibraryIS.WinFormsClient
                 Password = password
             };
 
-            var response = await this.PostAsJsonAsync<UserDto>("api/users/authenticate", user);
+            var response = await client.PostAsJsonAsync<UserDto>("api/users/authenticate", user);
 
             if (response.IsSuccessStatusCode)
             {
@@ -28,7 +22,7 @@ namespace LibraryIS.WinFormsClient
 
                 var accessToken = "Bearer " + authorizedUser.Token;
 
-                this.DefaultRequestHeaders.Add("Authorization", accessToken);
+                client.DefaultRequestHeaders.Add("Authorization", accessToken);
                 //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(accessToken);
 
                 return true;
