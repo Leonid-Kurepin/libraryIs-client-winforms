@@ -33,7 +33,7 @@ namespace LibraryIS.WinFormsClient.Forms
                 Role = textBoxRole.Text
             };
 
-            if (await _client.AddUsersAsync(newUser))
+            if (await _client.AddUserAsync(newUser))
             {
                 this.Close();
             }

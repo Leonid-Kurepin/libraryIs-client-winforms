@@ -14,7 +14,7 @@ namespace LibraryIS.WinFormsClient.HttpClient.Extensions
             return await response.Content.ReadAsAsync<PagedCollectionResponse<UserDto>>();
         }
 
-        public static async Task<bool> AddUsersAsync(this LibraryIsHttpClient client, UserDto userDto)
+        public static async Task<bool> AddUserAsync(this LibraryIsHttpClient client, UserDto userDto)
         {
 
             var postTask = client.PostAsJsonAsync<UserDto>("api/users", userDto);
